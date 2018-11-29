@@ -16,8 +16,8 @@
 
 ```javascript
 import synchronize from "cluster-synchronize";
-import cluster from "cluster";
-import os from "os";
+import * as cluster from "cluster";
+import * as os from "os";
 
 if (cluster.isMaster) {
     for (let i=0; i < os.cpus().length; i++) {
