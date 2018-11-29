@@ -9,7 +9,7 @@ const queue = connectQueue(hash(process.cwd()).toString(16));
 /**
  * Runs asynchronous operations synchronously between worker processes.
  * Note that this function will not turn your operations synchronous, but make 
- * them running sequentially to protect concurrency issues when your program 
+ * them running sequentially to prevent concurrency issues when your program 
  * runs in cluster mode.
  */
 function synchronize(body) {

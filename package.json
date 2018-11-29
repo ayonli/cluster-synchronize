@@ -1,6 +1,6 @@
 {
   "name": "cluster-synchronize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Runs asynchronous operations synchronously between worker processes.",
   "main": "index.js",
   "types": "index.d.ts",
