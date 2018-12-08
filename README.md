@@ -26,7 +26,7 @@ if (cluster.isMaster) {
     }
 } else {
     synchronize(async () => {
-        // Do everything asynchronous and don't worry concurrency control
+        // Do everything asynchronous and don't worry about concurrency control
         // issues.
     });
 }
