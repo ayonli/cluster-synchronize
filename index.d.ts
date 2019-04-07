@@ -5,4 +5,10 @@
  * runs in cluster mode.
  */
 export declare function synchronize(body: (done?: (err?: any) => void) => void | Promise<void>): Promise<void>;
+
+export declare namespace synchronize {
+    /** Sets a timeout to force release the queue for next task. */
+    function setTimeout(timeout: number): void;
+}
+
 export default synchronize;

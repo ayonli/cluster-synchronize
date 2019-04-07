@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const connectQueue = require("ipqueue").default;
 const hash = require("string-hash");
 
-const queue = connectQueue(hash(process.cwd()).toString(16));
+const queue = connectQueue(hash(process.mainModule.filename).toString(16));
 
 /**
  * Runs asynchronous operations synchronously between worker processes.
@@ -38,5 +38,9 @@ function synchronize(body) {
         });
     });
 }
+
+synchronize.setTimeout = function (timeout) {
+    queue.setTimeout(timeout);
+};
 
 exports.default = exports.synchronize = synchronize;

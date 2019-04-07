@@ -45,3 +45,8 @@ rejection handler.
 
 If `done` isn't provided, then the job in `body` will be automatically handled, 
 and any error occurred will be caught by the promise rejection handler.
+
+`synchronize.setTimeout(timeout: number): void`
+
+Sets a timeout to force release the queue for next task. By default, the timeout
+is `5000`ms.
